@@ -1,0 +1,38 @@
+.feature {
+    padding-bottom: 0;
+}
+
+.feature-list {
+    display: flex;
+}
+
+.feature-list .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+.feature-list p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.feature-list .item {
+    width: calc((100% - 90px)/4);
+}
+
+.feature-list .item+.item {
+    margin-left: 30px;
+}
+
+.feature-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: var(--card-color);
+    margin-bottom: 30px;
+}
