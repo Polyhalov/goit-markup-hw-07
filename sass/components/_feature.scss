@@ -6,7 +6,7 @@
     display: flex;
 }
 
-.feature-list .title {
+.feature-list__title {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 14px;
@@ -15,20 +15,26 @@
     color: var(--title-text-color);
 }
 
-.feature-list p {
+.feature-list__text{
     margin-top: 0;
     margin-bottom: 0;
+    font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        text-align: left;
 }
 
-.feature-list .item {
+.feature-list__item{
     width: calc((100% - 90px)/4);
 }
 
-.feature-list .item+.item {
+.feature-list__item +.feature-list__item {
     margin-left: 30px;
 }
 
-.feature-background {
+.feature-list__icon {
     display: flex;
     align-items: center;
     justify-content: center;
