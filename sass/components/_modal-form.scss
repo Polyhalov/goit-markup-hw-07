@@ -27,22 +27,20 @@
     padding-left: 42px;
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            border: 1px solid var(--hover-color);
+        }
 }
 
 .icon-svg {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.area-form:focus {
-    border: 1px solid var(--hover-color);
-}
-
-.area-form:focus+.icon-svg {
-    fill: var(--hover-color);
+    .area-form:focus + & {
+            fill: var(--hover-color);
+        }
 }
 
 .form-input {
-    /* outline: 1px solid green; */
     display: flex;
     align-items: center;
     position: relative;
@@ -51,7 +49,6 @@
 
 .icon-svg {
     display: flex;
-    /* outline: 1px solid yellow; */
     position: absolute;
     left: 12px;
 }
@@ -69,15 +66,18 @@
     margin-bottom: 20px;
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            border: 1px solid var(--hover-color);
+        }
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
 
-::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-}
 
-.comments:focus {
-    border: 1px solid var(--hover-color);
-}
+
+
 
 .checkbox {
     appearance: none;
@@ -95,35 +95,37 @@
     margin-right: 9px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .checkbox:checked + &{
+            border-color: transparent;
+            background-color: var(--hover-color);
+            background-size: contain;
+            background-origin: border-box;
+            fill: var(--white-color)
+        }
+    .checkbox:focus + &{
+            border: 2px solid var(--hover-color);
+        }
 }
 
-.checkbox:checked+.custom-check {
-    border-color: transparent;
-    background-color: var(--hover-color);
-    background-size: contain;
-    background-origin: border-box;
-    fill: var(--white-color)
-}
 
-.checkbox:focus+.custom-check {
-    border: 2px solid var(--hover-color);
-}
+
+
 
 .check-label {
     display: flex;
     align-items: center;
-    /* outline: 1px solid black; */
     margin-bottom: 30px;
 }
 
 .confirm {
     color: var(--hover-color);
-    /* margin-left: 5px; */
+    &:hover {
+            text-decoration: none;
+        }
 }
 
-.confirm:hover {
-    text-decoration: none;
-}
+
 
 .submit {
     background-color: var(--hover-color);
@@ -141,12 +143,14 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+            background-color: var(--button-back-color)
+        }
 }
 
-.submit:hover,
-.submit:focus {
-    background-color: var(--button-back-color)
-}
+
 
 .submit-icon {
     text-align: center;
